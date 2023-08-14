@@ -5,8 +5,6 @@
              xmlns:local1="clr-namespace:SomeProject.View.Converters"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
-        <local1:StrToIntConverter x:Key="wqe">
-            
-        </local1:StrToIntConverter>
+        
     </Application.Resources>
 </Application>
