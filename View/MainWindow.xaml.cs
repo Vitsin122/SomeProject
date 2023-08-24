@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using SomeProject.View.Converters;
+﻿using SomeProject.Model.Functions;
+using System.Windows;
 
 namespace SomeProject.View
 {

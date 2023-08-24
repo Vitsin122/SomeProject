@@ -62,12 +62,14 @@
         <TextBox Grid.Row="3" Grid.Column="1" Height="28" Text="{Binding B, UpdateSourceTrigger=LostFocus, Converter={StaticResource StrToInt}, Mode=TwoWay}"/>
         <Label Grid.Column="2" HorizontalAlignment="Left" Content="C"/>
         <ComboBox Grid.Column="2" Grid.Row="1" Margin="10,10,10,150"/>
-        <DataGrid Grid.Column="3" Grid.RowSpan="4" Margin="10" GridLinesVisibility="All" CanUserAddRows="True">
+        <DataGrid Grid.Column="3" Grid.RowSpan="4" Margin="10" GridLinesVisibility="All" CanUserAddRows="True" ItemsSource="{Binding FuncArgs}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="F(x,y)"/>
-                <DataGridTextColumn Header="X"/>
-                <DataGridTextColumn Header="Y"/>
+                <DataGridTextColumn Header="f(x,y)" Binding="{Binding Path = Result, Mode=OneWay}"/>
+                <DataGridTextColumn Header="x" Binding="{Binding Path = X, Converter={StaticResource StrToInt}}"/>
+                <DataGridTextColumn Header="y" Binding="{Binding Path = Y, Converter={StaticResource StrToInt}}"/>
             </DataGrid.Columns>
+            <DataGrid.CommandBindings>
+            </DataGrid.CommandBindings>
         </DataGrid>
     </Grid>
 </Window>
