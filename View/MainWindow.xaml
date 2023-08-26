@@ -61,7 +61,7 @@
         <Label Grid.Row="3" Content="B" Height="50" Width="30"/>
         <TextBox Grid.Row="3" Grid.Column="1" Height="28" Text="{Binding B, UpdateSourceTrigger=LostFocus, Converter={StaticResource StrToInt}, Mode=TwoWay}"/>
         <Label Grid.Column="2" HorizontalAlignment="Left" Content="C"/>
-        <ComboBox Grid.Column="2" Grid.Row="1" Margin="10,10,10,150"/>
+        <ComboBox Grid.Column="2" Grid.Row="1" Margin="10,10,10,145" ItemsSource="{Binding CList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValue="{Binding C}"/>
         <DataGrid Grid.Column="3" Grid.RowSpan="4" Margin="10" GridLinesVisibility="All" CanUserAddRows="True" ItemsSource="{Binding FuncArgs}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="f(x,y)" Binding="{Binding Path = Result, Mode=OneWay}"/>

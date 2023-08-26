@@ -1,5 +1,4 @@
-﻿using SomeProject.Model.Functions;
-using System.Windows;
+﻿using System.Windows;
 
 namespace SomeProject.View
 {
@@ -12,7 +11,7 @@ namespace SomeProject.View
         {
             InitializeComponent();
 
-            DataContext = new SomeProject.ViewModel.ViewModelProvider();
+            DataContext = new ViewModel.ViewModelProvider();
         }
     }
 }
